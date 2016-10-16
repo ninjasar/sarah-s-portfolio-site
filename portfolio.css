@@ -122,8 +122,9 @@ textarea {
   color: #666;
 }
 #footer-top {
-background-color: #bbb;
-height: 200px;
+  background-color: #bbb;
+  height: 200px;
+  color: #fff;
 }
 #footer-bottom {
   background-color: #722872;
