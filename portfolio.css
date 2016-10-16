@@ -16,7 +16,7 @@ body {
   left:0px;
   right:0px;
 }
-#nav {
+.nav {
   text-decoration: none;
   color:#bbb;
   font-weight: bold;
@@ -34,10 +34,10 @@ body {
   box-width: 70px;
   letter-spacing: 2px;
 }
-#nav:hover {
+.nav:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-#nav:active {
+.navlink:active .nav {
   background-color: #f2f2f2;
   color: #666;
 }
@@ -130,3 +130,22 @@ height: 200px;
   height: 50px;
   text-align: center;
 }
+.button {
+  color: #fff;
+  border:solid 2px #fff;
+  border-radius:50%;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+  font-size:20px;
+  line-height:45px;
+  transition:all .3s ease-in-out;
+  padding-top: 12px;
+
+}
+.button:hover {
+    border:solid 2px #fff;
+    color:#722872;
+    background: #fff;
+  }
