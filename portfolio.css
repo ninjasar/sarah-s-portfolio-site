@@ -126,11 +126,7 @@ textarea {
   height: 200px;
   color: #fff;
 }
-#footer-bottom {
-  background-color: #722872;
-  height: 50px;
-  text-align: center;
-}
+
 .button {
   color: #fff;
   border:solid 2px #fff;
@@ -150,3 +146,11 @@ textarea {
     color:#722872;
     background: #fff;
   }
+#footer-bottom {
+  background-color: #722872;
+  height: 50px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
