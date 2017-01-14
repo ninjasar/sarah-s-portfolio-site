@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+body {
+  -webkit-transition: 2s; /* for animation */
+  transition: 2s;
+  font-family: 'Raleway', Futura;
+}
+
+#wrapper {
+  position: absolute;
+  left: 35%;
+  right: 35%;
+  top: 30%;
+  text-align: center;
+}
+
+#container {
+  background-color: #f2f2f2;
+  display: block;
+  text-align: center;
+
+
+  padding: 20px 20px 50px 20px;
+
+}
+
+
+.btnDiv {
+  margin: 15px;
+}
+
+.button {
+  -webkit-transition: 2s;
+  transition: background-color 2s;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  height: 40px;
+
+}
+
+#quote {
+  padding: 10px 10px 0px 10px;
+  font-weight: bold;
+  font-size: 30px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.author {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.signature {
+  width:450px;
+  text-align:center;
+  display:block;
+  margin:15px auto 30px auto;
+  font-size:0.8em;
+  color:#fff;
+}
+
+@media screen and (max-device-width: 640px) {
+  #wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    text-align: center;
+    font-size: 30px;
+    display: block;
+    margin: 0 auto;
+  }
+  #container {
+    background-color: #f2f2f2;
+    display: inline-block;
+    text-align: center;
+    padding: 50px 70px 50px 70px;
+    margin: 0 auto !important;
+  }
+  #quote {
+    font-size: 50px;
+  }
+
+  .author {
+    font-size: 30px;
+  }
+  .button {
+    padding: 5px 10px 10px 10px;
+    height: 50px;
+  }
+
+}
+
+
+@media screen and (min-device-width: 650px) and (max-device-width: 1200px) {
+  #wrapper {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 30%;
+    text-align: center;
+  }
+  #container {
+    background-color: #f2f2f2;
+    display: inline-block;
+    text-align: center;
+
+    padding: 50px 20px 50px 20px;
+
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  #wrapper {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+  }
+
+}
