@@ -15,35 +15,13 @@ function getLoc() {
   });
 }
 
-/*function getLocation(){
 
-  if(navigator.geolocation) {
-
-    return new Promise((resolve, reject) => {
-
-      navigator.geolocation.getCurrentPosition(function(position) {
-
-        resolve(position.coords);
-
-      });
-
-    });
-
-  }else{
-
-    return Promise.reject(new Error('No Location Object'));
-
-  }
-
-}*/
 
 var kelvinTemp = 0;
 var outside = '';
 function getWeather() {
 
-  //return getLocation().then((location) => {
 
-    //console.log(location);
 
     $.ajax({
       url : 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID='+apiKey+'',
@@ -57,13 +35,7 @@ function getWeather() {
       }
     });
 
-  /*}, (err) => {
 
-    console.log(err);
-
-    alert('Could not get location!');
-
-  });*/
 
 }
 
