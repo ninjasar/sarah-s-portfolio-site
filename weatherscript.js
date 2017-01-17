@@ -1,7 +1,21 @@
 
 const apiKey = 'a4d21341e1c7b7dc8cc1b4cd6225be89';
+var city = '';
+var country = '';
+function getLoc() {
+  $.ajax({
+    url: "http://ipinfo.io/json",
+    dataType: 'jsonp',
+    jsonp: 'callback',
+    success: (res) => {
+      city = res.city;
+      country = res.country;
+      getWeather();
+    }
+  });
+}
 
-function getLocation(){
+/*function getLocation(){
 
   if(navigator.geolocation) {
 
@@ -21,18 +35,18 @@ function getLocation(){
 
   }
 
-}
+}*/
 
 var kelvinTemp = 0;
 var outside = '';
 function getWeather() {
 
-  return getLocation().then((location) => {
+  //return getLocation().then((location) => {
 
-    console.log(location);
+    //console.log(location);
 
     $.ajax({
-      url : 'http://api.openweathermap.org/data/2.5/weather?lat='+location.latitude+'&lon='+location.longitude+'&APPID='+apiKey+'',
+      url : 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID='+apiKey+'',
       dataType: 'jsonp',
       jsonp: 'callback',
 
@@ -43,13 +57,13 @@ function getWeather() {
       }
     });
 
-  }, (err) => {
+  /*}, (err) => {
 
     console.log(err);
 
     alert('Could not get location!');
 
-  });
+  });*/
 
 }
 
@@ -89,8 +103,8 @@ function celsius() {
 
 
 $(document).ready(() => {
+  getLoc();
 
-  getWeather();
 
 
 
