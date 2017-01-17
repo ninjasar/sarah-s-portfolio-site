@@ -58,6 +58,7 @@ function iconGen(outside) {
 
 function fahrenheit() {
   $('.temp').html(`
+    ${city}, ${country}<br><br>
     ${Math.round(((kelvinTemp - 273.15) * (9/5) + 32) * 10) / 10}&#8457<br><br>
     ${outside}<br><br>
     ${iconGen(outside)}<br><br>
@@ -66,7 +67,9 @@ function fahrenheit() {
 }
 
 function celsius() {
-  $('.temp').html(`${Math.round((kelvinTemp - 273.15) * 10) / 10}&#8451<br><br>
+  $('.temp').html(`
+  ${city}, ${country}<br><br>
+  ${Math.round((kelvinTemp - 273.15) * 10) / 10}&#8451<br><br>
   ${outside}<br><br>
   ${iconGen(outside)}<br><br>
   <div class = "btn"><button type="button" onclick="fahrenheit()">Switch to Fahrenheit</button></div>
