@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Wiki Viewer</title>
+  <link rel="stylesheet" href="wikiStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/911aefd3b2.js"></script>
+  <script src="wiki.js"></script>
+</head>
+<body>
+  <div class="header">
+    Personal Wiki Viewer
+    <div class="grabContent">
+      <button class="randbtn" onclick="loadPage('https://en.wikipedia.org/wiki/Special:Random')" type="button">Random Article</button>
+      <form id="searchForm" name="myForm">
+        <span style="color: #270235; font-size: 20px;">Search: </span><input class="search" name="search2" type="text">
+        <button class="randbtn" type="submit" style="font-size: 15px; margin: 5px; border-radius: 50%; padding: 10px;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="content" id="main">
+    <iframe src="" style="display:none;"></iframe>
+  </div>
+</body>
+</html>

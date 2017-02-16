@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:700,900');
 @import
 url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
+
 body {
   color: #666;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 15px;
   background-color: #888;
+  position: relative;
 }
 #banner {
   background-color: #722872;
@@ -15,29 +17,51 @@ body {
   position: fixed;
   left:0px;
   right:0px;
+  z-index: 100;
 }
-.nav {
+.nav li a {
+  display: flex;
+  align-items: center;
+}
+
+a:focus   {
+  color: #666 !important;
+}
+a:hover  {
+  color: #666 !important;
+}
+.nav1 {
   text-decoration: none;
   color:#bbb;
   font-weight: bold;
   font-size: 15px;
-  margin-top: 25px;
   text-align:center;
   float: right;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
+  margin-top: -35px;
+  height: 50px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 .navlink {
   text-decoration: none;
-  color:#666;
   height: 50px;
   box-width: 70px;
   letter-spacing: 2px;
 }
-.nav:hover {
+
+.nav1:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
-.navlink:active .nav {
+a .navlink:active .nav1 {
+  background-color: #f2f2f2;
+  color: #666;
+}
+a .navlink:focus .nav1 {
   background-color: #f2f2f2;
   color: #666;
 }
@@ -79,7 +103,13 @@ body {
 .pfimg {
   max-width: 400px;
   padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;
 }
+.pfimg:hover {opacity: 0.7;}
+
 #contact {
   background-color: #eee;
   text-align: center;
@@ -153,4 +183,100 @@ textarea {
   bottom: 0;
   width: 100%;
   color: #fff;
+}
+.codepen_embed_body {
+  width: 400px;
+}
+
+/* Style the Image Used to Trigger the Modal */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    z-index: 150;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-device-width: 650px) and (max-device-width: 1200px) {
+  .nav {
+    font-size: 40px;
+  }
+  #aboutMe {
+    font-size: 40px;
+  }
 }

@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Sarah's html</title>
+    <style type="text/css">
+      body {
+        font-family: fantasy;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+      }
+      h1 {
+        font-weight : bold;
+      }
+      .linkContainer {
+        text-decoration: none;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        top: 30px;
+      }
+      .linkContainer a {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+      .stuff {
+        -webkit-margin-before: 0px;
+        -webkit-margin-after: 0px;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        top : 0;
+      }
+      .thing {
+        padding-right: 20px;
+        text-align: left;
+      }
+      #header{
+        background-color: #3d004d;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        border-style: solid;
+        border-width: 30px;
+        border-color: #330033;
+      }
+
+      .box {
+        background-color: #990099;
+        color: #ffe6ff;
+        display: inline-block;
+        margin: 30px;
+        border-width: medium;
+        border-style: solid;
+        border-color: #ffffff;
+      }
+
+
+      .popup{
+        padding:10px;
+        transition-duration: .5s;
+      }
+      .popup:hover {
+        padding:20px;
+        font-size: 20px;
+      }
+
+      .stuff img, .popup img{
+        width:100px;
+        transition-duration: 1s;
+      }
+
+      .popup:hover img{
+        width: 150px;
+      }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+  </head>
+
+  <body>
+
+
+    <div id="header">
+
+        <div class= "box stuff" onclick="doThis()"><img src= "yoshipic1.jpg" alt = "my kittyboo" ></div>
+
+
+      <div class="box thing">
+
+        <ol>
+          <li> monkeys </li>
+          <li> cats </li>
+          <li> lizards </li>
+        </ol>
+
+      </div>
+
+      <div class = "box linkContainer">
+        <a href = "animation.html">Click here</a>
+      </div>
+
+  </div>
+  <button type = "reset" > click! </button>
+
+    <script type="text/javascript">
+
+      var c = document.body.childNodes;
+      console.log(Array.prototype.map.call(c, function(value){ return value.nodeType; }));
+
+      function doThis(){
+
+        var stuff = document.getElementsByClassName('stuff');
+
+        var stuffText = stuff[0].innerHTML;
+
+        var resText = "";
+
+        for (var a = 0; a < 10; a++) {
+          resText += stuffText + '<br/>';
+        }
+
+        document.getElementById("header").innerHTML += '<br/><div class= "box popup">' + resText + '</div>';
+
+      }
+
+    </script>
+  </body>
+
+
+</html>

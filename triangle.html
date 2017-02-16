@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+      <title> Triangle Mouse </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <style>
+
+        /*
+        5 across top right side
+        5 across top left side
+        10 across right side
+        10 across left side
+        0 across bottom
+        */
+
+        #pointer {
+          position: absolute;
+          left:100px;
+          top:100px;
+          width: 0px;
+          height: 0px;
+          border-left: 25px solid blue;
+          border-right: 25px solid blue;
+          border-bottom: 50px solid black;
+          border-top: 50px solid red;
+        }
+
+
+
+      </style>
+  </head>
+  <body>
+
+    <div id="pointer"></div>
+
+    <script type='text/javascript'>
+
+      var mouseX = 0;
+      var mouseY = 0;
+
+      $("body").mousemove(function(e){
+
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+      });
+
+      var mouse = document.getElementById('pointer');
+
+      $( "body" ).click(() => {
+
+        console.log('test');
+
+          mouse.style.left = mouseX - 25 + 'px';
+          mouse.style.top = mouseY - 50 + 'px';
+        });
+
+    </script>
+
+  </body>
+
+</html>

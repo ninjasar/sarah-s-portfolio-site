@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Swath</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style type="text/css">
+      .pixel {
+        display:inline-block;
+        height:1px;
+        width:1px;
+      }
+      .box {
+        display:inline-block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      for(var b = 0; b < 256; b += 85){
+
+        document.write('<div class="box">');
+
+        for(var r = 0; r < 256; r++){
+
+          for(var g = 0; g < 256; g++){
+
+            document.write('<div class="pixel" style="background-color:rgb(' + Math.floor(r) + ',' + Math.floor(g) + ',' + Math.floor(b) + ');"></div>');
+
+          }
+
+          document.write('<br/>');
+
+        }
+
+        document.write('</div>');
+
+      }
+
+    </script>
+
+  </body>
+</html>

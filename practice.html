@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>
+      practice
+    </title>
+
+    <style>
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      var fruits = [
+        'Apple',
+        'Orange',
+        'Pear',
+        'Nectarine',
+        'Strawberry'
+      ];
+      var getRandom = () => {
+        if(Math.floor(Math.random() * 10)){
+          return getRandomFruit();
+        }else{
+          return getRandomBowl();
+        }
+      }
+      var getRandomFruit = () => fruits[Math.floor(Math.random() * fruits.length)];
+      var getRandomBowl = () => {
+        var bowl = [];
+        for(var a=0;a<5;a++) bowl.push(getRandom());
+        return bowl;
+      }
+
+      var bowl = getRandomBowl();
+
+      console.log(bowl);
+
+      var fruitCount = {};
+
+      function countFruitsInBowl(bowl) {
+        bowl.forEach(function(item){
+          if(typeof item == "string") {
+            if(fruitCount[item] === undefined) fruitCount[item] = 0;
+            fruitCount[item]++;
+          }else{
+            countFruitsInBowl(item);
+          }
+        })
+      }
+
+      countFruitsInBowl(bowl);
+
+      console.log(fruitCount);
+
+
+    </script>
+
+  </body>
+
+</html>
